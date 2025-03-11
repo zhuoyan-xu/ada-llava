@@ -139,36 +139,36 @@
 
 
               <span class="author-block">
-                <a href="https://pages.cs.wisc.edu/~zxu444/">Zhuoyan Xu*<sup>&dagger;</sup></a>,
+                <a href="https://pages.cs.wisc.edu/~zxu444/">Zhuoyan Xu*<sup>1</sup></a>,
               </span>
 
 
 
               <span class="author-block">
-                <a href="https://khoiucd.github.io/">Khoi Duc Nguyen*<sup>&dagger;</sup></a>,
+                <a href="https://khoiucd.github.io/">Khoi Duc Nguyen*<sup>1</sup></a>,
               </span>
               
             
               <span class="author-block">
-                Preeti Mukherjee<sup>&szlig;</sup>,
+                <a href="https://scholar.google.co.in/citations?user=QYFQutkAAAAJ&hl=en">Preeti Mukherjee<sup>2</sup></a>,
               </span>
 
               <br>
 
               <span class="author-block">
-                <a href="https://schaterji.io/">Somali Chaterji<sup>&szlig;</sup></a>,
+                <a href="https://www.saurabhbagchi.us/">Saurabh Bagchi<sup>2</sup></a>,
               </span>
 
               <span class="author-block">
-                <a href="https://www.saurabhbagchi.us/">Saurabh Bagchi<sup>&szlig;</sup></a>,
+                <a href="https://schaterji.io/">Somali Chaterji<sup>2</sup></a>,
               </span>
 
               <span class="author-block">
-                <a href="https://pages.cs.wisc.edu/~yliang/" style="color:#008AD7;font-weight:normal;">Yingyu Liang<sup>&dagger;&diams;</sup></a>,
+                <a href="https://pages.cs.wisc.edu/~yliang/" style="color:#008AD7;font-weight:normal;">Yingyu Liang<sup>1,3</sup></a>,
               </span>
 
               <span class="author-block">
-                <a href="https://www.biostat.wisc.edu/~yli/">Yin Li<sup>&dagger;</sup></a>
+                <a href="https://www.biostat.wisc.edu/~yli/">Yin Li<sup>1;</sup></a>
               </span>
 
             
@@ -182,39 +182,15 @@
 
 
             <div class="is-size-4 publication-authors">
-              <span class="author-block"><b style="color:#f68946; font-weight:normal">&dagger; </b> University of Wisconsin-Madison</b></span>
-              <span classå="author-block"><b style="color:#008AD7; font-weight:normal">&szlig; </b> Purdue University </span>
-              <span class="author-block"><b style="color:#F2A900; font-weight:normal">&diams; </b>The University of Hong Kong</span>
+              <span class="author-block"><b style="color:#f68946; font-weight:normal"><sup>1 </b> University of Wisconsin-Madison</b></span>
+              <span classå="author-block"><b style="color:#008AD7; font-weight:normal"><sup>2 </b> Purdue University </span>
+              <span class="author-block"><b style="color:#F2A900; font-weight:normal"><sup>3 </b>The University of Hong Kong</span>
             </div>
 
 
 
 
 
-            
-          <!-- <div class="column has-text-centered">
-            <h3 class="title is-3 publication-title">Improved Baselines with Visual Instruction Fine-tuning</h3>
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                <a href="https://hliu.cc/" style="color:#f68946;font-weight:normal;">Haotian Liu<sup>*</sup></a>,
-              </span>
-              <span class="author-block">
-                <a href="https://chunyuan.li/" style="color:#008AD7;font-weight:normal;">Chunyuan Li<sup>*</sup></a>,
-              </span>
-              <span class="author-block">
-                <a href="https://yuheng-li.github.io" style="color:#008AD7;font-weight:normal;">Yuheng Li</a>,
-              </span>
-              <span class="author-block">
-                <a href="https://pages.cs.wisc.edu/~yongjaelee/" style="color:#f68946;font-weight:normal;">Yong Jae
-                  Lee</a>
-              </span>
-            </div>
-
-            <div class="is-size-5 publication-authors">
-              <span class="author-block"><b style="color:#f68946; font-weight:normal">&#x25B6 </b> University of
-                Wisconsin-Madison</b></span>
-              <span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Microsoft Research</span>
-            </div> -->
 
             <div class="column has-text-centered">
               <div class="publication-links">
@@ -236,15 +212,6 @@
                     <span>Code</span>
                   </a>
                 </span>
-                <!-- <span class="link-block">
-                  <a href="https://pages.cs.wisc.edu/~mucai/" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="far fa-images"></i>
-                    </span>
-                    <span>Demo</span>
-                  </a>
-                </span> -->
                 <span class="link-block">
                   <a href="https://github.com/zhuoyan-xu/AdaLLaVA" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
@@ -264,18 +231,6 @@
                   </a>
                 </span>
 
-
-                
-
-                <!-- <span class="link-block">
-                <a href="#"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                  </a>
-              </span> -->
               </div>
             </div>
           </div>
@@ -312,13 +267,13 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Multimodal Large Language Models (MLLMs) have shown impressive capabilities in reasoning, yet come with substantial computational cost, limiting their deployment in resource-constraint environments. Despite some recent efforts on improving the efficiency of MLLMs, prior solutions yield models with static accuracy and latency footprint, and thus fall short in responding to varying runtime conditions, including changing resource availability (e.g. contention due to other programs on the device). To bridge this gap, we introduce  <b>AdaLLaVA</b>---an adaptive inference framework that learns to dynamically reconfigure operations in an MLLM during inference, accounting for the input data and a latency budget. We perform extensive experiments across multimodal benchmarks involving question-answering, reasoning and hallucination. Our results show that <b>AdaLLaVA</b> can adhere to input latency budget and achieve varying accuracy and latency trade-offs at runtime.
+              Multimodal Large Language Models (MLLMs) have shown impressive capabilities in reasoning, yet come with substantial computational cost, limiting their deployment in resource-constrained settings. Despite recent efforts on improving the efficiency of MLLMs, prior solutions fall short in responding to varying runtime conditions, in particular changing resource availability (e.g., contention due to the execution of other programs on the device). To bridge this gap, we introduce <b>AdaLLaVA</b>, an adaptive inference framework that learns to dynamically reconfigure operations in an MLLM during inference, accounting for the input data and a latency budget. We conduct extensive experiments across benchmarks involving question-answering, reasoning, and hallucination. Our results show that AdaLLaVA effectively adheres to input latency budget, achieving varying accuracy and latency tradeoffs at runtime. Further, we demonstrate that AdaLLaVA adapts to both input latency and content, can be integrated with token selection for enhanced efficiency, and generalizes across MLLMs.
               <br><br>
               Our key <b>contributions</b> are three folds. 
               <ol type="1">
-                <li>We present <b></b>, a novel adaptive inference framework for MLLM. Our method for the first time enables dynamic model execution based on a latency budget and input contents at inference time.
-                <li>We design a <b>latency-aware</b> scheduler, which reconfigures a base MLLM model at inference time, along with a probabilistic modeling approach that allows for the incorporation of hard latency constraints during MLLM training.
-                <li>Through extensive experiments, we show that AdaLLaVA can adapt to a range of latency requirements while preserving the performance of the base model, and that AdaLLaVA can be integrated with token selection techniques to further enhance efficiency.
+                <li>We present <b>AdaLLaVA</b>, a novel adaptive inference framework for MLLMs. Our method is among the first to enable dynamic execution of MLLMs based on a latency budget and the input content at inference time.
+                <li>Our key technical innovation lies in (1) the design of a learning-based, latency-aware scheduler, which reconfigures a base MLLM model during inference; and (2) a probabilistic modeling approach, which incorporates hard latency constraints during MLLM training.
+                <li>Through extensive experiments, we demonstrate that (1) AdaLLaVA can adapt to a range of latency requirements while preserving the performance of the base model; and (2) AdaLLaVA can be integrated with token selection techniques to further enhance efficiency.
               </ol>  
            </p>
   
@@ -341,15 +296,24 @@
               During inference, model is given:
               <ol type="1">
                 <li><b>Content</b>. Image-query pair.
-                <li><b>Latency constraints</b>. The total latency budget model should meet. (FLOPs, time, etc.)
+                <li><b>Latency constraints</b>. The total latency budget model should yield. (FLOPs, time, etc.)
               </ol>  
            </p>
-           <centering>
+           <!-- <centering>
             <div style="text-align: center;">
               <img id="teaser" width="70%" src="images2/teaser.png">     
             </div>
             <b>AdaLLaVA</b> learns to generate appropriate responses while adapting to varying computational budgets.
-          </centering>  
+          </centering>   -->
+
+          <div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin-bottom: 20px; margin-left: 40px;">
+            <div style="width: 85%; display: flex; justify-content: center;">
+              <img src="images2/teaser.png" alt="Teaser image" style="width: 100%;">
+            </div>
+            <div style="width: 65%; display: flex; justify-content: center;">
+              <img src="images2/radar_chart.png" alt="Second figure" style="width: 100%;">
+            </div>
+          </div>
   
           </div>
         </div>
@@ -357,11 +321,6 @@
         
     </div>
   </section>
-
-
-
-
-
 
 
 
@@ -382,15 +341,16 @@
       <div class="content has-text-justified"> 
       <centering>
         <div style="text-align: center;">
-          <!-- <img id="teaser" width="50%" src="images/architecture.png">      -->
-          <img id="teaser" width="80%" src="images2/main_dia.png">     
+          <img id="teaser" width="80%" src="images2/main_diag.png">     
         </div>
       </centering>  
       <p>
         Overview of <b>AdaLLaVA</b>:
-        <ol type="1">
-          <li><b>(a)</b> Learning based latency encoder and and scheduler. The encoder will embed latency budget into an additional latency token, This token's embeddings are extracted from specific intermediate layers and fed to the scheduler, determining execution plans for components in subsequent layers. These plans can control either complete layers or specific subsets within layers.
-          <li><b>(b)</b> Within each layer, our design focuses on two primary components: attention heads and MLP neurons, specifically their activation values. The control over MLP neurons can be achieved using a subset of the weight matrix.
+        <ol>
+          <li><b>(a) Model architecture:</b> Our latency encoder embeds an input latency budget into a latency token, which is further processed by the early part of the LLM. The resulting embedding is then fed into the scheduler, leading to the output of an execution plan that control individual operations in the remaining part of the LLM. Our latency encoder and scheduler are jointed learned with the MLLM.
+          <li><b>(b) AdaLLaVA-L:</b> The scheduler controls the execution of entire Transformer blocks.
+          <li><b>(c) AdaLLaVA-H:</b> The scheduler controls the execution of attention heads and MLP neurons, by masking out their activation values and the corresponding weights.
+
         </ol>  
      </p>
     </div>
@@ -418,7 +378,8 @@
       <div class="column is-full-width">
         <div class="content has-text-justified"> 
           <p>
-            <b>AdaLlava achieves comparable performance with reduced computational requirements.</b> AdaLlava is also compatible to token selection techniques.
+            <b>AdaLlava demonstrates competitive performance with notable efficiency improvements across all benchmarks, adhering to the
+              specified latency budgets .</b> AdaLlava also complements to existing token selection approaches.
           </p>
         </div>
         <centering>
@@ -440,7 +401,7 @@
   <!-- Results. -->
   <div class="columns is-centered has-text-centered">
     <div class="column is-six-fifths">
-      <h2 class="title is-3"><img id="painting_icon" width="3%" src="images2/Line-chart-icon.png"> Latency Awareness</h2>
+      <h2 class="title is-3"><img id="painting_icon" width="3%" src="images2/Line-chart-icon.png"> Latency Adaptivity</h2>
     </div>
   </div>
   <!-- </div> -->
@@ -451,15 +412,21 @@
     <div class="column is-full-width">
       <div class="content has-text-justified"> 
         <p>
-          <b>Balance between latency and accuracy.</b> AdaLLaVA exhibits strong adaptability to different latency budgets,
-          effectively trading accuracy for speed during inference, particularly in extremely latency-constrained settings.
+          <b>Adaptivity to input latency budget.</b> AdaLLaVA exhibits the
+          ability to complete inference under varying latency requirements using a single model. 
         </p>
       </div>
       <centering>
         <div style="text-align: center;">
-          <img id="teaser" width="50%" src="images2/latency_aware.png">     
+          <img id="teaser" width="80%" src="images2/latency_curves.png">     
         </div>
       </centering>  
+      <p></p>
+      <p>
+        <b>AdaLLaVA</b> can empower a base MLLM with static compute footprint (i.e., LLaVA-1.5,
+        PruMerge+, or FastV as individual dots) to adapt to varying accuracy-latency tradeoffs (i.e. the corresponding curves).
+        With varying latency budgets from 50% to 100%, AdaLLaVA effectively trades compute with accuracy. 
+      </p>
     </div>
     
   </div>
@@ -474,7 +441,7 @@
   <!-- Results. -->
   <div class="columns is-centered has-text-centered">
     <div class="column is-six-fifths">
-      <h2 class="title is-3"><img id="painting_icon" width="3%" src="images2/rocket-icon.png"> Content Awareness</h2>
+      <h2 class="title is-3"><img id="painting_icon" width="3%" src="images2/rocket-icon.png"> Content Adaptivity</h2>
     </div>
   </div>
 
@@ -510,7 +477,7 @@
         </div>
         <centering>
           <div style="text-align: center;">
-            <img id="teaser" width="50%" src="images2/exe_plan.png">     
+            <img id="teaser" width="70%" src="images2/exe_plan.png">     
           </div>
         </centering>  
       </div>
@@ -522,7 +489,74 @@
 </section>
 
 <!-- ======================== -->
+
+<section class="section">
+  <!-- Results. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths">
+      <h2 class="title is-3"><img id="painting_icon" width="3%" src="images2/rocket-icon.png"> Generalization of AdaLLaVA </h2>
+    </div>
+  </div>
+
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified"> 
+          <p>
+            <b>Generalization to other MLLMs.</b> AdaLLaVA can generalize to other MLLMs beyond LLaVA.
+          </p>
+        </div>
+        <centering>
+          <div style="text-align: center;">
+            <img id="teaser" width="50%" src="images2/mipha_radar_chart.png">     
+          </div>
+        </centering>  
+        <p></p>
+      <p>
+        <b>AdaLLaVA</b> can empower a Mipha-3B, a lightweight MLLM built on Phi-2.7B and achieves similar results as LLaVA 1.5.
+      </p>
+      </div>
+      
+    </div>
+  
+  </div>
+
+</section>
 <!-- ======================== -->
+
+<section class="section">
+  <!-- Results. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths">
+      <h2 class="title is-3"><img id="painting_icon" width="3%" src="images2/rocket-icon.png"> Interesting findings </h2>
+    </div>
+  </div>
+
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified"> 
+          <p>
+            <b>Visualization for latency token across layers.</b> Evolution of the attention score between latency token and visual tokens from layers 12 to 16
+          </p>
+        </div>
+        <b>Query:</b> Who is the main character?
+        <centering>
+          <div style="text-align: center;">
+            <img id="teaser" width="100%" src="images2/attention_across_layers.png">     
+          </div>
+        </centering>  
+        <p></p>
+      <p>
+        The latency token progressively gathers key information from the input visual tokens for scheduling. 
+      </p>
+      </div>
+      
+    </div>
+  
+  </div>
 <!-- ======================== -->
 <!-- ======================== -->
 <!-- ======================== -->
