@@ -131,7 +131,7 @@
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">AdaLLaVA<span class="is-size-2"><span class="is-size-1"></span></h1>
             <h3 class="title is-2 publication-title">Learning to Inference Adaptively for Multimodal <br>  Large Language Models</h3>
-            <h5 class="subtitle is-4 publication-awards">arXiv 2024</h5>
+            <h5 class="subtitle is-4 publication-awards">arXiv 2025</h5>
             <div class="is-size-4 publication-authors">
               <!-- <span class="author-block">
                 <a href="https://pages.cs.wisc.edu/~mucai/" style="color:#008AD7;font-weight:noprmal;">Mu Cai^{1}<sup></sup></a>,
@@ -308,10 +308,10 @@
 
           <div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin-bottom: 20px; margin-left: 40px;">
             <div style="width: 85%; display: flex; justify-content: center;">
-              <img src="images2/teaser.png" alt="Teaser image" style="width: 100%;">
+              <img src="images2/teaser.svg" alt="Teaser image" style="width: 100%;">
             </div>
             <div style="width: 65%; display: flex; justify-content: center;">
-              <img src="images2/radar_chart.png" alt="Second figure" style="width: 100%;">
+              <img src="images2/radar_chart.svg" alt="Second figure" style="width: 100%;">
             </div>
           </div>
   
@@ -341,15 +341,15 @@
       <div class="content has-text-justified"> 
       <centering>
         <div style="text-align: center;">
-          <img id="teaser" width="80%" src="images2/main_diag.png">     
+          <img id="teaser" width="80%" src="images2/main_diag.svg">     
         </div>
       </centering>  
       <p>
         Overview of <b>AdaLLaVA</b>:
         <ol>
-          <li><b>(a) Model architecture:</b> Our latency encoder embeds an input latency budget into a latency token, which is further processed by the early part of the LLM. The resulting embedding is then fed into the scheduler, leading to the output of an execution plan that control individual operations in the remaining part of the LLM. Our latency encoder and scheduler are jointed learned with the MLLM.
-          <li><b>(b) AdaLLaVA-L:</b> The scheduler controls the execution of entire Transformer blocks.
-          <li><b>(c) AdaLLaVA-H:</b> The scheduler controls the execution of attention heads and MLP neurons, by masking out their activation values and the corresponding weights.
+          <li><b>(a) Model architecture:</b> Our latency encoder embeds an input latency budget into a latency token, which is further processed by the early part of the LLM. The resulting embedding is then fed into the scheduler, leading to the output of an execution plan that control individual operations in the remaining part of the LLM. Our latency encoder and scheduler are jointly learned with the MLLM.
+          <li><b>(b) AdaLLaVA-L:</b> This design attaches binary switches to entire Transformer blocks. When a switch is off, the corresponding block is bypassed through its residual connection, becoming an identity mapping. The execution plan thus determines whether each layer is computed or bypassed
+          <li><b>(c) AdaLLaVA-H:</b> (head/neuron-level): This design introduces binary switches within Transformer blocks, targeting individual attention heads in attention modules and specific neurons in MLP layers. When a switch is off, its computation is skipped, and its contribution is removed. In MLP, switches function similarly to dropout, selectively disabling neuron activations.
 
         </ol>  
      </p>
@@ -384,7 +384,7 @@
         </div>
         <centering>
           <div style="text-align: center;">
-            <img id="teaser" width="90%" src="images2/main_tab.png">     
+            <img id="teaser" width="90%" src="images2/main_tab.svg">     
           </div>
         </centering>  
       </div>
@@ -418,7 +418,7 @@
       </div>
       <centering>
         <div style="text-align: center;">
-          <img id="teaser" width="80%" src="images2/latency_curves.png">     
+          <img id="teaser" width="80%" src="images2/latency_curves.svg">     
         </div>
       </centering>  
       <p></p>
@@ -458,7 +458,7 @@
         </div>
         <centering>
           <div style="text-align: center;">
-            <img id="teaser" width="50%" src="images2/attn_map.png">     
+            <img id="teaser" width="50%" src="images2/attn_map.svg">     
           </div>
         </centering>  
       </div>
@@ -477,7 +477,7 @@
         </div>
         <centering>
           <div style="text-align: center;">
-            <img id="teaser" width="70%" src="images2/exe_plan.png">     
+            <img id="teaser" width="70%" src="images2/exe_plan.svg">     
           </div>
         </centering>  
       </div>
@@ -509,12 +509,12 @@
         </div>
         <centering>
           <div style="text-align: center;">
-            <img id="teaser" width="50%" src="images2/mipha_radar_chart.png">     
+            <img id="teaser" width="50%" src="images2/mipha_radar_chart.svg">     
           </div>
         </centering>  
         <p></p>
       <p>
-        <b>AdaLLaVA</b> can empower a Mipha-3B, a lightweight MLLM built on Phi-2.7B and achieves similar results as LLaVA 1.5.
+        <b>AdaLLaVA</b> can empower Mipha-3B, a lightweight MLLM built on Phi-2.7B and achieves similar results as LLaVA 1.5.
       </p>
       </div>
       
@@ -543,9 +543,12 @@
           </p>
         </div>
         <b>Query:</b> Who is the main character?
+        <br>
+        <br>
+
         <centering>
           <div style="text-align: center;">
-            <img id="teaser" width="100%" src="images2/attention_across_layers.png">     
+            <img id="teaser" width="100%" src="images2/attention_across_layers.svg">     
           </div>
         </centering>  
         <p></p>
@@ -579,12 +582,12 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>
-        <!-- @article{shang2024LLaVA-PruMerge,
-          title={LLaVA-PruMerge: Adaptive Token Reduction for Efficient Large Multimodal Models},
-          author={Shang, Yuzhang and Cai, Mu and Xu, Bingxin and Lee, Yong Jae and Yan, Yan},
-          journal={arXiv preprint arXiv:2403.15388},
-          year={2024}
-        } -->
+        @article{zhuoyan2025adallava,
+          title={Learning to Inference Adaptively for Multimodal Large Language Models},
+          author={Xu, Zhuoyan and Nguyen, Khoi Duc and Mukherjee, Preeti and Bagchi, Saurab and Chaterji, Somali and Liang, Yingyu and Li, Yin},
+          journal={arXiv preprint},
+          year={2025}
+        }
   </code></pre>
     </div>
   </section>
